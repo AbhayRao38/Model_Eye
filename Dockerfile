@@ -6,5 +6,5 @@ RUN pip install --no-cache-dir -r requirements.txt
 RUN pip install --no-cache-dir gunicorn
 COPY . /app
 ENV MODEL_PRETRAINED_PATH=/app/pretrained
-EXPOSE 5002
-CMD ["gunicorn", "-w", "1", "-b", "0.0.0.0:5000", "eye_api:app"]
+EXPOSE 7860
+CMD ["gunicorn", "-w", "1", "-b", "0.0.0.0:7860", "eye_api:app"]
